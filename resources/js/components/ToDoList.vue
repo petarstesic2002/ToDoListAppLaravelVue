@@ -3,11 +3,13 @@
     <div class="text-center my-4">
         <router-link class="btn btn-outline-primary" to="/add">Dodaj novi zadatak</router-link>
     </div>
-    <div v-if="tasks.length < 1" class="text-center">
-        <h3 class="mt-2">Trenutno nema zadataka</h3>
+    <div v-if="tasks.length < 1" class="text-center mt-2">
+        <h3>Trenutno nema zadataka</h3>
     </div>
     <div class="container text-center table-responsive" v-else>
-        <span v-if="message!=''" class="alert alert-warning text-center my-3">{{ message }}</span>
+        <div class="mt-3">
+            <span v-if="message!=''" class="alert alert-warning text-center mt-3 pt-5">{{ message }}</span>
+        </div>
         <table class="table table-striped text-center mt-5">
             <thead>
                 <tr>
